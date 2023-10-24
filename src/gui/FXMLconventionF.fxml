@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.FXMLconventionFController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1220.0">
+         <left>
+            <VBox prefHeight="740.0" prefWidth="230.0" spacing="50.0" style="-fx-background-color: #964B00;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="320.0" prefWidth="340.0" spacing="15.0">
+                     <children>
+                        <ImageView fitHeight="223.0" fitWidth="223.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@../../../../380547707_1383389462252126_7706192676081871073_n-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <Label alignment="CENTER" onMouseClicked="#NavigateToOffreF" prefHeight="36.0" prefWidth="625.0" text="Nos offres" textFill="WHITE">
+                     <font>
+                        <Font name="Freestyle Script" size="49.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="285.0" prefWidth="230.0">
+                     <children>
+                        <Label layoutX="12.0" layoutY="218.0" prefHeight="57.0" prefWidth="205.0" text="Demander une convention" textFill="WHITE">
+                           <font>
+                              <Font name="System Italic" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="45.0" layoutY="129.0" prefHeight="202.0" prefWidth="528.0" spacing="10.0">
+                     <children>
+                        <HBox prefHeight="40.0" prefWidth="528.0">
+                           <children>
+                              <Label prefHeight="39.0" prefWidth="210.0" text="Société">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="tfsociete" prefHeight="40.0" prefWidth="322.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="44.0" prefWidth="528.0">
+                           <children>
+                              <Label prefHeight="39.0" prefWidth="206.0" text="Adresse">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="tfadresse" prefHeight="40.0" prefWidth="322.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="40.0" prefWidth="528.0">
+                           <children>
+                              <Label prefHeight="39.0" prefWidth="206.0" text="Email">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="tfemail" prefHeight="40.0" prefWidth="322.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="43.0" prefWidth="528.0">
+                           <children>
+                              <Label prefHeight="39.0" prefWidth="206.0" text="Téléphone">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="tftelephone" prefHeight="40.0" prefWidth="322.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="TOP_RIGHT" layoutX="35.0" layoutY="32.0" prefHeight="44.0" prefWidth="601.0">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="625.0" text="Dépôt de Conventions" textFill="#2b8e2b">
+                           <font>
+                              <Font name="Freestyle Script" size="62.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Button fx:id="btnInsert" layoutX="43.0" layoutY="340.0" mnemonicParsing="false" onAction="#Ajout" prefHeight="34.0" prefWidth="273.0" style="-fx-background-color: #424242; -fx-border-color: #FFFFFF;" text="Demander une convention">
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.5476190476190477">
+                           <stops>
+                              <Stop color="#c29e0ed2" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnclear" layoutX="413.0" layoutY="340.0" mnemonicParsing="false" onAction="#Clear" prefHeight="34.0" prefWidth="160.0" style="-fx-background-color: #424242; -fx-border-color: #FFFFFF;" text="Annuler">
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.5476190476190477">
+                           <stops>
+                              <Stop color="#c29e0ed2" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
