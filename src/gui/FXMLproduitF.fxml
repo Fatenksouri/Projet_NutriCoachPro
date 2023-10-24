@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.FXMLproduitFController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1220.0">
+         <center>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="50.0" styleClass="secondary-color" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="TOP_RIGHT" prefHeight="44.0" prefWidth="780.0">
+                     <children>
+                        <HBox alignment="TOP_RIGHT" prefHeight="44.0" prefWidth="780.0">
+                           <children>
+                              <Label prefHeight="36.0" prefWidth="625.0" text="Produits" textFill="#2b8e2b">
+                                 <font>
+                                    <Font name="Freestyle Script" size="62.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label prefHeight="36.0" prefWidth="625.0" textFill="WHITE">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="60.0" prefWidth="303.0">
+                           <children>
+                              <TextField fx:id="searchField" prefHeight="35.0" prefWidth="163.0" promptText="Rechercher" />
+                              <Pane prefHeight="50.0" prefWidth="19.0" />
+                              <Button mnemonicParsing="false" onAction="#searchProducts" prefHeight="34.0" prefWidth="48.0" style="-fx-background-color: #424242; -fx-border-color: #FFFFFF;" text="🔍">
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#d6c03a" />
+                                          <Stop color="WHITE" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Pane prefHeight="57.0" prefWidth="268.0">
+                           <children>
+                              <Button layoutX="-46.0" layoutY="1.0" mnemonicParsing="false" onAction="#refresh" prefHeight="32.0" prefWidth="118.0" style="-fx-background-color: #424242; -fx-border-color: #FFFFFF;" text="Actualiser 🔄">
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#d6c03a" />
+                                          <Stop color="WHITE" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="76.0" layoutY="1.0" mnemonicParsing="false" onAction="#goPanierF" prefHeight="32.0" prefWidth="154.0" style="-fx-background-color: #424242; -fx-border-color: #FFFFFF;" text="Mon panier 🛒">
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#d6c03a" />
+                                          <Stop color="WHITE" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children></Pane>
+                        <VBox prefHeight="57.0" prefWidth="338.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="110.0" text="Filtre/Prix">
+                                 <font>
+                                    <Font name="System Italic" size="14.0" />
+                                 </font></Label>
+                              <Slider fx:id="priceSlider" majorTickUnit="50.0" max="2000.0" prefHeight="33.0" prefWidth="134.0" showTickLabels="true" value="200.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Pane prefHeight="616.0" prefWidth="780.0">
+                     <children>
+                        <ScrollPane fx:id="scroll" prefHeight="415.0" prefWidth="889.0">
+                           <content>
+                              <GridPane fx:id="grid" prefHeight="159.0" prefWidth="186.0">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children></Pane>
+                  <HBox alignment="CENTER" prefHeight="41.0" prefWidth="780.0">
+                     <children>
+                        <Pane prefHeight="41.0" prefWidth="461.0" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="30.0" left="50.0" right="50.0" top="30.0" />
+               </padding>
+            </VBox>
+         </center>
+         <left>
+           <fx:include source="menuFront.fxml" />  
+
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
