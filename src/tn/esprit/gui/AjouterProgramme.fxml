@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="465.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.gui.AjouterProgrammeController">
+   <children>
+      <Label layoutX="210.0" layoutY="59.0" text="Nom " />
+      <Label layoutX="210.0" layoutY="91.0" text="Description" />
+      <Label layoutX="210.0" layoutY="126.0" text="Date debut" />
+      <Label layoutX="210.0" layoutY="162.0" text="Date fin" />
+      <TextField fx:id="txt_nom_prg" layoutX="285.0" layoutY="52.0" />
+      <TextField fx:id="txt_description_prg" layoutX="285.0" layoutY="87.0" />
+      <VBox layoutY="-6.0" prefHeight="471.0" prefWidth="109.0" style="-fx-background-color: #964B00;">
+         <children>
+            <ImageView fitHeight="144.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/received_258319863860798-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="navigateToCompte" mnemonicParsing="false" onAction="#navigateToCompte" prefHeight="58.0" prefWidth="144.0" text="Compte" textFill="#3d9155">
+               <font>
+                  <Font name="Freestyle Script" size="34.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <TableView fx:id="tableprog" layoutX="156.0" layoutY="189.0" prefHeight="262.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="table_nom_prg" prefWidth="84.0" text="Nom" />
+          <TableColumn fx:id="table_description_prg" prefWidth="84.00001525878906" text="Description" />
+          <TableColumn fx:id="table_datedebut_prg" prefWidth="116.0" text="Date debut" />
+          <TableColumn fx:id="table_datefin_prg" prefWidth="115.99996948242188" text="Date fin" />
+            <TableColumn fx:id="qr_code_program" prefWidth="190.66668701171875" text="Qrcode" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_ajouter_prg" layoutX="505.0" layoutY="109.0" mnemonicParsing="false" onAction="#addprog" prefHeight="25.0" prefWidth="81.0" style="-fx-background-color: #22780F;" text="Ajouter" textFill="#f8f4f4">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button fx:id="btn_supprimer_prg" layoutX="622.0" layoutY="109.0" mnemonicParsing="false" onAction="#deleteprog" style="-fx-background-color: #22870F;" text="Supprimer" textFill="#f8f4f4">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Label layoutX="156.0" layoutY="-13.0" prefHeight="39.0" prefWidth="191.0" text="Programmes" textAlignment="CENTER" textFill="#539157">
+         <font>
+            <Font name="Freestyle Script" size="49.0" />
+         </font>
+      </Label>
+      <Label fx:id="txt_id_coach" layoutX="703.0" layoutY="170.0" text="Label" />
+      <DatePicker fx:id="txt_datedebut_prg" layoutX="285.0" layoutY="122.0" prefHeight="25.0" prefWidth="161.0" />
+      <DatePicker fx:id="txt_datefin_prg" layoutX="285.0" layoutY="158.0" prefHeight="25.0" prefWidth="161.0" />
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>
