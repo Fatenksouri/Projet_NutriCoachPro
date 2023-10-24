@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.AmbientLight?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="541.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="offregestion.gui.MesOffresController">
+   <children>
+      <TableView fx:id="tablemesoffres" layoutX="141.0" layoutY="171.0" prefHeight="200.0" prefWidth="531.0">
+        <columns>
+          <TableColumn fx:id="txtnom" prefWidth="75.0" text="non_offre" />
+          <TableColumn fx:id="txtdate" prefWidth="75.0" text="date_offre" />
+            <TableColumn fx:id="txtheure_debut" prefWidth="75.0" text="heure_debut" />
+            <TableColumn fx:id="txtheure_fin" prefWidth="75.0" text="heure_fin" />
+            <TableColumn fx:id="txtprix" prefWidth="75.0" text="prix" />
+            <TableColumn fx:id="txtdescription" prefWidth="75.0" text="description" />
+            <TableColumn fx:id="txttype" text="type" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnchercher" layoutX="397.0" layoutY="51.0" mnemonicParsing="false" text="recherche" />
+      <TextField fx:id="txachecher" layoutX="481.0" layoutY="51.0" promptText="entrer date" />
+      <Button fx:id="btnreserver" layoutX="348.0" layoutY="415.0" mnemonicParsing="false" onAction="#handleReserverButtonAction" prefHeight="35.0" prefWidth="78.0" text="reserver" />
+      <VBox fx:id="vbox" prefHeight="541.0" prefWidth="136.0" />
+      <AmbientLight color="CHARTREUSE" layoutX="221.0" layoutY="51.0" lightOn="true" />
+      <Button fx:id="btnpdf" layoutX="221.0" layoutY="420.0" mnemonicParsing="false" onAction="#handlePdfButtonAction" text="pdf" />
+      <Button fx:id="btnmail" layoutX="504.0" layoutY="420.0" mnemonicParsing="false" text="valider " />
+   </children>
+</AnchorPane>
