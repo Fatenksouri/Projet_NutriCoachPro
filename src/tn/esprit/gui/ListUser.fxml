@@ -49,5 +49,6 @@
       <TextField fx:id="edit_prenom" layoutX="131.0" layoutY="207.0" prefHeight="25.0" prefWidth="136.0" promptText="Prénom" />
       <TextField fx:id="edit_email" layoutX="131.0" layoutY="269.0" prefHeight="25.0" prefWidth="136.0" promptText="Email" />
       <TextField fx:id="edit_role" layoutX="131.0" layoutY="337.0" prefHeight="25.0" prefWidth="136.0" promptText="Role" />
+      <Button fx:id="deconnectionadmin" layoutX="264.0" layoutY="415.0" mnemonicParsing="false" onAction="#deconnectionAdmin" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: #22780F;" text="Se déconnecter" />
    </children>
 </AnchorPane>

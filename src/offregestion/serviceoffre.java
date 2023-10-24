@@ -4,7 +4,7 @@
 // * and open the template in the editor.
  //*/
 package offregestion;
-import static com.sun.deploy.config.JREInfo.getAll;
+//import static com.sun.deploy.config.JREInfo.getAll;
 import offregestion.typeoffre;
 
 import java.sql.Connection;

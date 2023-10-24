@@ -80,6 +80,8 @@ public class ListUserController implements Initializable {
    private ObservableList<User> userListData = FXCollections.observableArrayList();
     @FXML
     private Button searchuser;
+    @FXML
+    private Button deconnectionadmin;
    
    
      
@@ -155,6 +157,11 @@ public class ListUserController implements Initializable {
         edit_email.setText(selectedUser.getEmail());
         edit_role.setText(selectedUser.getRole().toString());
         return selectedUser;
+    }
+
+    @FXML
+    private void deconnectionAdmin(ActionEvent event) {
+         SceneBuilderUtil.changeScene(event, "Login.fxml", "validation", null, 600, 400 );
     }
 
 

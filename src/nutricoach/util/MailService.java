@@ -16,10 +16,10 @@ import java.util.Properties;
  */
 public class MailService {
   
-    private static final String EMAIL_USERNAME = "afefkhadraoui1@gmail.com";
-    private static final String EMAIL_PASSWORD = "kwgylwlinjouwpzl";
-    //private static final String EMAIL_USERNAME = "servicenutricoachpro@gmail.com";
-    //private static final String EMAIL_PASSWORD = "fgfwxfdgmuntfnuo";
+    //private static final String EMAIL_USERNAME = "afefkhadraoui1@gmail.com";
+    //private static final String EMAIL_PASSWORD = "kwgylwlinjouwpzl";
+    private static final String EMAIL_USERNAME = "servicenutricoachpro@gmail.com";
+    private static final String EMAIL_PASSWORD = "fgfwxfdgmuntfnuo";
 
     public static void sendActivationEmail(String recipientEmail, String msg) {
         Properties properties = new Properties();
