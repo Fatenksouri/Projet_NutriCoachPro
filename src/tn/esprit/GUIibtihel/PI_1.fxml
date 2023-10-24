@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane id="AnchorPane" prefHeight="485.0" prefWidth="712.0" stylesheets="@../../../CSS/c1.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.GUIibtihel.PIController1">
+   <children>
+      <VBox prefHeight="504.0" prefWidth="181.0" style="-fx-background-color: #444;" stylesheets="@../../../CSS/style%20(1).css">
+         <children>
+            <ImageView fx:id="imd_act" fitHeight="258.0" fitWidth="180.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/img.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnMenuActivite" mnemonicParsing="false" onAction="#fnMenuActivite" prefHeight="102.0" prefWidth="180.0" styleClass="button-oval" stylesheets="@../../../CSS/style%20(1).css" text="Activite">
+               <font>
+                  <Font size="25.0" />
+               </font></Button>
+            <Button fx:id="btnMenuPlanning" mnemonicParsing="false" onAction="#fnMenuPlanning" prefHeight="113.0" prefWidth="183.0" styleClass="button-oval" stylesheets="@../../../CSS/style%20(1).css" text="Planning">
+               <font>
+                  <Font size="25.0" />
+               </font></Button>
+            <Button fx:id="btnMenuHome_ac" mnemonicParsing="false" onAction="#fnMenuHome_acc" prefHeight="111.0" prefWidth="181.0" styleClass="button-oval" stylesheets="@../../../CSS/style%20(1).css" text="Retour Home">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <StackPane layoutX="181.0" prefHeight="504.0" prefWidth="557.0">
+         <children>
+            <Pane fx:id="pnmail_ac" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D3D3D3;" stylesheets="@../../../CSS/style%20(1).css">
+               <children>
+                  <Label layoutX="22.0" layoutY="148.0" styleClass="label2" stylesheets="@../../../CSS/style%20(1).css" text="ADDRESSE " />
+                  <Label layoutX="40.0" layoutY="210.0" styleClass="label2" stylesheets="@../../../CSS/style%20(1).css" text="SUJET" />
+                  <Label layoutX="30.0" layoutY="281.0" styleClass="label2" stylesheets="@../../../CSS/style%20(1).css" text="MESSAGE" />
+                  <TextField fx:id="toField_ac" layoutX="151.0" layoutY="150.0" styleClass="text-field1" stylesheets="@../../../CSS/style%20(1).css" />
+                  <TextField fx:id="subjectField_ac" layoutX="151.0" layoutY="212.0" styleClass="text-field1" stylesheets="@../../../CSS/style%20(1).css" />
+                  <TextField fx:id="messageArea_ac" layoutX="148.0" layoutY="292.0" prefHeight="161.0" prefWidth="180.0" styleClass="text-field1" stylesheets="@../../../CSS/style%20(1).css" />
+                  <Button fx:id="retour1_ac" layoutX="20.0" layoutY="450.0" mnemonicParsing="false" onAction="#retour1_ac" styleClass="button-oval" stylesheets="@../../../CSS/style%20(1).css" />
+                  <Label layoutX="85.0" layoutY="46.0" styleClass="label1" stylesheets="@../../../CSS/style%20(1).css" text="RAVIS DE VOUS ENTENDRE " />
+                  <Button fx:id="envoi_mail_ac" layoutX="407.0" layoutY="433.0" mnemonicParsing="false" onAction="#envoyerMail_ac" styleClass="button-oval" stylesheets="@../../../CSS/style%20(1).css" text="envoyer" />
+                  <ImageView fitHeight="229.0" fitWidth="214.0" layoutX="348.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/pn.jpeg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pnFormPlanning" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D3D3D3;" stylesheets="@../../../CSS/c1.css">
+               <children>
+                  <HBox layoutX="23.0" layoutY="270.0" prefHeight="266.0" prefWidth="350.0">
+                     <children>
+                        <VBox prefHeight="266.0" prefWidth="157.0">
+                           <children>
+                              <Label prefHeight="57.0" prefWidth="162.0" styleClass="label2" stylesheets="@../../../CSS/style%20(1).css" text="NOM" textFill="#628253">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="10.0" prefHeight="57.0" prefWidth="162.0" styleClass="label2" stylesheets="@../../../CSS/style%20(1).css" text="DUREE" textFill="#628253">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="266.0" prefWidth="216.0">
+                           <children>
+                              <TextField fx:id="tfnompl" prefHeight="58.0" prefWidth="205.0" styleClass="text-field1" stylesheets="@../../../CSS/style%20(1).css" />
+                              <TextField fx:id="tfdurepl" layoutX="10.0" layoutY="10.0" prefHeight="58.0" prefWidth="205.0" styleClass="text-field1" stylesheets="@../../../CSS/style%20(1).css" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Button fx:id="retour2_ac1" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#retour1_ac" styleClass="button-oval" stylesheets="@../../../CSS/style%20(1).css" text="&lt;&lt;" />
+                  <Button fx:id="btnconfAoutPL" layoutX="388.0" layoutY="410.0" mnemonicParsing="false" onAction="#fnConfPL" prefHeight="46.0" prefWidth="125.0" style="-fx-background-color: #6e984c;" styleClass="button-oval" stylesheets="@../../../CSS/style%20(1).css" text="CONFIRMER" />
+                  <Label fx:id="lbTitleAjoutPlanning" layoutX="303.0" layoutY="27.0" styleClass="label1" stylesheets="@../../../CSS/style%20(1).css" text="Ajouter un Planning">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbTitleModifierPlanning" layoutX="292.0" layoutY="27.0" styleClass="label1" stylesheets="@../../../CSS/style%20(1).css" text="Modifier un Planning">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pn_rating_ac" prefHeight="436.0" prefWidth="443.0" style="-fx-background-color: #D3D3D3;">
+               <children>
+                  <Rating fx:id="ratingA_ac" layoutX="191.0" layoutY="213.0" prefHeight="25.0" prefWidth="309.0" rating="0.0" />
+                  <Button fx:id="btn_rat_ac" layoutX="247.0" layoutY="306.0" mnemonicParsing="false" onAction="#enregistrer_ratting_ac" prefHeight="36.0" prefWidth="100.0" styleClass="button-oval" stylesheets="@../../../CSS/style%20(1).css" text="OK" />
+                  <Button fx:id="retour2_ac" layoutX="14.0" layoutY="465.0" mnemonicParsing="false" onAction="#retour2_ac" styleClass="button-oval" stylesheets="@../../../CSS/style%20(1).css" text="&lt;&lt;" />
+                  <Label layoutX="263.0" layoutY="95.0" prefHeight="67.0" prefWidth="293.0" styleClass="label1" stylesheets="@../../../CSS/style%20(1).css" text="Evaluer notre activité">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnActivite" prefHeight="504.0" prefWidth="540.0" style="-fx-background-color: #D3D3D3;">
+               <children>
+                  <Label layoutX="339.0" styleClass="label1" stylesheets="@../../../CSS/style%20(1).css" text="page Activite">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tvActivite" layoutX="27.0" layoutY="122.0" onMouseClicked="#fnSelectedActivite" prefHeight="180.0" prefWidth="517.0" stylesheets="@../../../CSS/style%20(1).css">
+                     <columns>
+                        <TableColumn fx:id="col_id_AC" prefWidth="48.333343505859375" text="ID" />
+                        <TableColumn fx:id="col_nom_AC" prefWidth="69.3333740234375" text="NOM" />
+                        <TableColumn fx:id="col_duree_AC" prefWidth="56.0" text="DUREE" />
+                        <TableColumn fx:id="col_REP_AC" prefWidth="37.6666259765625" text="REP" />
+                        <TableColumn fx:id="col_DESC_AC" prefWidth="157.0" text="DESCRIPTION" />
+                        <TableColumn fx:id="col_OBJ_AC" prefWidth="72.66668701171875" text="OBJECTIF" />
+                        <TableColumn fx:id="col_TYPE_AC" prefWidth="72.66668701171875" text="TYPE" />
+                     </columns>
+                  </TableView>
+                  <Label fx:id="lbidac" prefHeight="17.0" prefWidth="33.0" />
+                  <ChoiceBox fx:id="chR_typ_AC" layoutX="50.0" layoutY="85.0" prefWidth="150.0" styleClass="comboBox" stylesheets="@../../../CSS/style%20(1).css" />
+                  <ChoiceBox fx:id="chR_obj_AC" layoutX="211.0" layoutY="85.0" prefWidth="150.0" styleClass="comboBox" stylesheets="@../../../CSS/style%20(1).css" />
+                  <Button fx:id="generer_ac" layoutX="379.0" layoutY="73.0" mnemonicParsing="false" onAction="#rechercherActivites" styleClass="button-oval" stylesheets="@../../../CSS/style%20(1).css" text="Generer" />
+                  <Button fx:id="reset_ac" layoutX="477.0" layoutY="73.0" mnemonicParsing="false" onAction="#resetAffichage" styleClass="button-oval" stylesheets="@../../../CSS/style%20(1).css" text="Reset" />
+                  <Button fx:id="ActivitePlanning" layoutX="253.0" layoutY="451.0" mnemonicParsing="false" onAction="#fnAffecterActiviteAuPlanning" prefHeight="25.0" prefWidth="272.0" style="-fx-background-color: #444;" styleClass="button-oval" stylesheets="@../../../CSS/style%20(1).css" text="Ajouter Activiter a Planning" textFill="#d2d0d0" />
+                  <ChoiceBox fx:id="chnom_pl" layoutX="68.0" layoutY="458.0" prefHeight="25.0" prefWidth="136.0" styleClass="comboBox" stylesheets="@../../../CSS/style%20(1).css" />
+                  <Label fx:id="path_img" layoutX="86.0" layoutY="384.0" />
+                  <Button fx:id="evaluerA_ac" layoutX="27.0" layoutY="311.0" mnemonicParsing="false" onAction="#rating_acShow" styleClass="button-oval" stylesheets="@../../../CSS/style%20(1).css" text="evaluer" />
+               </children>
+            </Pane>
+            <Pane fx:id="pnPlanning" prefHeight="547.0" prefWidth="614.0" style="-fx-background-color: #D3D3D3;">
+               <children>
+                  <Label alignment="CENTER" layoutX="313.0" layoutY="9.0" styleClass="label1" stylesheets="@../../../CSS/style%20(1).css" text="page Planning">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tvPlanning" layoutX="15.0" layoutY="87.0" onMouseClicked="#fnSelectedPlanning" prefHeight="255.0" prefWidth="219.0" stylesheets="@../../../CSS/style%20(1).css">
+                    <columns>
+                      <TableColumn fx:id="col_id_pl" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="col_nom_pl" prefWidth="75.0" text="NOM" />
+                        <TableColumn fx:id="col_duree_pl" prefWidth="75.0" text="DUREE" />
+                    </columns>
+                  </TableView>
+                  <Label fx:id="lbidpl" prefHeight="17.0" prefWidth="33.0" />
+                  <Button fx:id="btnAjouterPlanning1" layoutX="16.0" layoutY="361.0" mnemonicParsing="false" onAction="#fnAjoutPlanning" style="-fx-background-color: #6e984c;" styleClass="button-oval" stylesheets="@../../../CSS/style%20(1).css" text="AJOUTER" />
+                  <TableView fx:id="tv_Planning_to_Activite" layoutX="313.0" layoutY="87.0" prefHeight="198.0" prefWidth="219.0" stylesheets="@../../../CSS/style%20(1).css">
+                    <columns>
+                      <TableColumn fx:id="COLNOMAC" prefWidth="75.0" text="NOM AC" />
+                      <TableColumn fx:id="COLDUREEAC" prefWidth="75.0" text="DUREE_AC" />
+                        <TableColumn fx:id="COLREPAC" prefWidth="75.0" text="REPET_AC" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="mail_ac" layoutX="365.0" layoutY="456.0" mnemonicParsing="false" onAction="#clickMailActivite" styleClass="button-oval" stylesheets="@../../../CSS/style%20(1).css" text="clicker pour envoyer mail" />
+                  <Label layoutX="223.0" layoutY="421.0" prefHeight="33.0" prefWidth="309.0" text="notre equipe est ravis de connaitre votre proposition ..." />
+                  <Button fx:id="like_ac" layoutX="361.0" layoutY="369.0" mnemonicParsing="false" onAction="#increment_like_ac" styleClass="button-oval" stylesheets="@../../../CSS/style%20(1).css" text="like" />
+                  <Button fx:id="dislike_ac" layoutX="445.0" layoutY="369.0" mnemonicParsing="false" onAction="#decremente_like_ac" styleClass="button-oval" stylesheets="@../../../CSS/style%20(1).css" text="dislike" />
+                  <Label fx:id="lb_like_ac" layoutX="339.0" layoutY="381.0" prefHeight="17.0" prefWidth="11.0" />
+                  <Label fx:id="lb_dislike_ac" layoutX="524.0" layoutY="381.0" prefHeight="17.0" prefWidth="17.0" />
+                  <Button fx:id="btnAjouterPlanning11" layoutX="320.0" layoutY="302.0" mnemonicParsing="false" onAction="#fnsupprimerActivite_Planning" style="-fx-background-color: #6e984c;" styleClass="button-oval" stylesheets="@../../../CSS/style%20(1).css" text="supprimer activité de planning" />
+                  <Label fx:id="lb_acp" layoutX="265.0" layoutY="17.0" prefHeight="17.0" prefWidth="11.0" />
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

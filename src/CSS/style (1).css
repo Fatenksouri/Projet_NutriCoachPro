@@ -1,0 +1,111 @@
+.search-box{
+    -fx-background-color:#FFFFFF;
+    -fx-background-radius: 100;
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.search-button{
+    -fx-background-color: #828282;
+    -fx-background-radius: 30;
+}
+
+.right-bar{
+    -fx-background-color: #D3D3D3;
+}
+
+.shadow{
+    -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);
+}
+
+.chosen-fruit-card{
+    -fx-background-color: #F16C31;
+    -fx-background-radius: 30;
+}
+
+.comboBox{
+    -fx-background-color: rgba(255,255,255,0.3);
+    -fx-background-radius: 30;
+}
+
+.add-btn{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 100;
+}
+
+.free-delivery-card{
+    -fx-background-color: #D3D3D3;
+    -fx-background-radius: 30;
+}
+
+.shopping-online-card{
+    -fx-background-color: #BAEAC3;
+    -fx-background-radius: 30;
+}
+
+.fruit-item{
+    -fx-background-color: #FFFFFF;
+        -fx-background-radius: 30;
+}
+.scroll_pane{
+    -fx-background-color: transparent;
+}
+.scroll_pane > .viewport{
+    -fx-background-color: transparent;
+}
+.label1 {
+    -fx-font-family: "Freestyle Script";
+    -fx-font-size: 49;
+}
+.label2 {
+    -fx-font-family: "Freestyle Script";
+    -fx-font-size: 25;
+}
+.label3 {
+    -fx-font-family: "Freestyle Script";
+    -fx-font-size: 40;
+}
+
+
+.text-field1 {
+    -fx-text-fill: #77dd77; /* Couleur du texte en vert pastel */
+    -fx-background-color: #e0ffe0; /* Couleur d'arrière-plan en vert pastel */
+    -fx-font-size: 14px; /* Taille du texte à 14 pixels */
+}
+/* Style de base du bouton ovale */
+/* Style de base du bouton ovale */
+.button-oval {
+    -fx-background-color: black; /* Couleur de fond noire par défaut */
+    -fx-background-radius: 50;
+    -fx-padding: 5 20; /* Rembourrage pour le bouton ovale */
+    -fx-font-family: "Freestyle Script"; /* Police de caractères "Freestyle Script" */
+    -fx-font-size: 22px; /* Taille de la police */
+    -fx-text-fill: white; /* Couleur du texte en blanc par défaut */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
+}
+
+/* Style du bouton ovale lorsqu'il est cliqué */
+.button-oval:pressed {
+    -fx-background-color: white; /* Nouvelle couleur de fond en blanc lorsqu'il est cliqué */
+    -fx-text-fill: black; /* Nouvelle couleur du texte en noir lorsqu'il est cliqué */
+}
+/* Style de base pour le TableView */
+.table-view {
+    -fx-background-color: transparent; /* Fond transparent */
+}
+
+/* Style des cellules */
+.table-row-cell {
+    -fx-background-color: transparent; /* Fond transparent */
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-background-radius: 0;
+    -fx-text-fill: black; /* Texte noir */
+}
+
+/* Style des cellules sélectionnées */
+.table-row-cell:selected {
+    -fx-background-color: transparent; /* Fond transparent pour la sélection */
+    -fx-text-fill: white; /* Texte blanc pour la sélection */
+}

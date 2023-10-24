@@ -1,0 +1,49 @@
+/* Create a CSS file, e.g., style.css */
+/* Assuming you have a folder named "css" in your project directory */
+
+/* Set a background image for the "pnFormPlanning" Pane */
+.root{
+    -fx-background-image: url("/image/img.png");
+    -fx-background-size: cover;
+}
+
+/* Set a background image for the "pnmail_ac" Pane */
+#pnmail_ac {
+    -fx-background-image: url("/image/pn.jpeg");
+    -fx-background-size: cover;
+}
+
+/* Set a background image for the "pn_rating_ac" Pane */
+#pn_rating_ac {
+    -fx-background-image: url("/image/pn.jpeg");
+    -fx-background-size: cover;
+}
+
+/* Set a background image for the "pnActivite" Pane */
+#pnActivite {
+    -fx-background-image: url("/image/pn.jpeg");
+    -fx-background-size: cover;
+}
+
+/* Set a background image for the "pnFormActivite" Pane */
+#pnFormActivite {
+    -fx-background-image: url("/image/pn.jpeg");
+    -fx-background-size: cover;
+}
+
+/* Set a background image for the "pnPlanning" Pane */
+#pnPlanning {
+    -fx-background-image: url("/image/pn.jpeg");
+    -fx-background-size: cover;
+}
+
+/* Set a background image for other Panes if needed */
+#pnFormPlanning {
+    -fx-background-image: url("/image/pn.jpeg");
+    -fx-background-size: cover;
+}
+#AnchorPane_home {
+    -fx-background-image: url("/image/home.png");
+    -fx-background-size: cover;
+}
+
