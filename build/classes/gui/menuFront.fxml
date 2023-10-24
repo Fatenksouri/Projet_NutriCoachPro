@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="740.0" prefWidth="230.0" spacing="50.0" style="-fx-background-color: #964B00;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MenuFrontController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="746.0" prefWidth="230.0" spacing="15.0">
+         <children>
+            <ImageView fitHeight="234.0" fitWidth="223.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../../../../380547707_1383389462252126_7706192676081871073_n-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Pane prefHeight="119.0" prefWidth="230.0" />
+            <Label alignment="CENTER" onMouseClicked="#gooffreF" prefHeight="36.0" prefWidth="625.0" text="Nos offres" textFill="WHITE">
+               <font>
+                  <Font name="Freestyle Script" size="49.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" onMouseClicked="#goProduitF" prefHeight="36.0" prefWidth="625.0" text="Nos produits" textFill="WHITE">
+               <font>
+                  <Font name="Freestyle Script" size="49.0" />
+               </font>
+            </Label>
+            <Pane prefHeight="310.0" prefWidth="230.0" />
+            <Label onMouseClicked="#goconventionF" prefHeight="96.0" prefWidth="206.0" text="Demander une convention" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Pane prefHeight="80.0" prefWidth="230.0" />
+         </children>
+      </VBox>
+   </children>
+</VBox>

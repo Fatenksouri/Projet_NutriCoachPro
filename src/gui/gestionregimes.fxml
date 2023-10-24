@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="880.0" prefWidth="1242.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.GestionregimesController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutY="-2.0" prefHeight="984.0" prefWidth="1571.0" style="-fx-background-color: #8AB76E;">
+         <children>
+            <Button layoutX="1153.0" layoutY="724.0" mnemonicParsing="false" onAction="#supprimereg" prefHeight="31.0" prefWidth="104.0" text="Supprimer " textFill="#1b1b1b" />
+            <TableView fx:id="regimetv" layoutX="658.0" layoutY="151.0" prefHeight="559.0" prefWidth="779.0" style="-fx-background-color: #B8D3AA;">
+               <columns>
+                  <TableColumn fx:id="nomregcol" prefWidth="97.0" text="nom" />
+                  <TableColumn fx:id="descregcol" prefWidth="145.0" text="Description" />
+                  <TableColumn fx:id="objregcol" prefWidth="112.0" text="Objectif" />
+                  <TableColumn fx:id="dureeregcol" prefWidth="84.0" text="Durée" />
+                  <TableColumn fx:id="dateregcol" prefWidth="143.0" text="Date de création" />
+                  <TableColumn fx:id="imcmincol" prefWidth="96.0" text="IMCmin" />
+                  <TableColumn fx:id="imcmaxcol" prefWidth="101.0" text="IMCmax" />
+               </columns>
+            </TableView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="76.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="200.0" fitWidth="249.0" layoutX="85.0">
+               <image>
+                  <Image url="@../image/380058065_862351195131450_3245300040714076188_n%20(1).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="314.0" layoutY="190.0" text="Nom :" />
+            <TextField fx:id="txtnomreg" layoutX="412.0" layoutY="185.0" prefHeight="31.0" prefWidth="187.0" />
+            <Label layoutX="312.0" layoutY="249.0" text="Description :" />
+            <TextField fx:id="txtdescreg" layoutX="412.0" layoutY="244.0" />
+            <Label layoutX="312.0" layoutY="317.0" text="Objectif :" />
+            <ChoiceBox fx:id="choiceobj" layoutX="412.0" layoutY="312.0" prefHeight="31.0" prefWidth="187.0" />
+            <Label layoutX="318.0" layoutY="384.0" text="Durée :" />
+            <TextField fx:id="txtduree" layoutX="412.0" layoutY="379.0" />
+            <Label layoutX="295.0" layoutY="457.0" text="Date de création :" />
+            <Label layoutX="322.0" layoutY="523.0" text="IMC min :" />
+            <Label layoutX="324.0" layoutY="584.0" text="IMCmax :" />
+            <TextField fx:id="txtimcmin" layoutX="412.0" layoutY="518.0" />
+            <TextField fx:id="txtimcmax" layoutX="412.0" layoutY="579.0" />
+            <DatePicker fx:id="datepickreg" layoutX="412.0" layoutY="452.0" prefHeight="31.0" prefWidth="187.0" />
+            <Button layoutX="412.0" layoutY="643.0" mnemonicParsing="false" onAction="#Ajouterreg" prefHeight="31.0" prefWidth="104.0" text="Ajouter" />
+            <Button layoutX="547.0" layoutY="642.0" mnemonicParsing="false" onAction="#modifierreg" prefHeight="31.0" prefWidth="104.0" text="Modifier" />
+            <Button layoutX="1008.0" layoutY="724.0" mnemonicParsing="false" onAction="#pdffiche" prefHeight="31.0" prefWidth="104.0" text="PDF" />
+            <Button layoutX="866.0" layoutY="724.0" mnemonicParsing="false" onAction="#excelfiche" prefHeight="31.0" prefWidth="111.0" text="excel" />
+            <TextField fx:id="filtretxtreg" layoutX="840.0" layoutY="72.0" />
+            <Button layoutX="1101.0" layoutY="72.0" mnemonicParsing="false" onAction="#filtrerreg" text="filtrer" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
