@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.FXMLconventionBController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1220.0">
+         <left>
+            <VBox prefHeight="740.0" prefWidth="230.0" spacing="50.0" style="-fx-background-color: #964B00;" styleClass="primary-color" stylesheets="@fxmlprofil.css" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="314.0" prefWidth="230.0" spacing="15.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="207.0" text="Espace Admin" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Cambria Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="211.0" fitWidth="192.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../380547707_1383389462252126_7706192676081871073_n-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <Label prefHeight="36.0" prefWidth="625.0" text="   Conventions" textFill="WHITE">
+                     <font>
+                        <Font name="Freestyle Script" size="49.0" />
+                     </font>
+                  </Label>
+                  <Label onMouseClicked="#NavigateToOffreB" prefHeight="63.0" prefWidth="230.0" text="   Offres" textFill="WHITE">
+                     <font>
+                        <Font name="Freestyle Script" size="49.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <Pane prefHeight="728.0" prefWidth="990.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="10.0" layoutY="181.0" prefHeight="214.0" prefWidth="219.0" spacing="10.0">
+                     <children>
+                        <HBox prefHeight="22.0" prefWidth="160.0">
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="102.0" text="Société">
+                                 <font>
+                                    <Font name="System Bold" size="11.0" />
+                                 </font></Label>
+                              <TextField fx:id="tfsociete" prefHeight="26.0" prefWidth="117.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="24.0" prefWidth="160.0">
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="102.0" text="Adresse">
+                                 <font>
+                                    <Font name="System Bold" size="11.0" />
+                                 </font></Label>
+                              <TextField fx:id="tfadresse" prefHeight="26.0" prefWidth="118.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="28.0" prefWidth="160.0">
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="102.0" text="Email">
+                                 <font>
+                                    <Font name="System Bold" size="11.0" />
+                                 </font></Label>
+                              <TextField fx:id="tfemail" prefHeight="28.0" prefWidth="118.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="28.0" prefWidth="160.0">
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="101.0" text="Téléphone">
+                                 <font>
+                                    <Font name="System Bold" size="11.0" />
+                                 </font></Label>
+                              <TextField fx:id="tftelephone" prefHeight="28.0" prefWidth="118.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="34.0" prefWidth="219.0">
+                           <children>
+                              <Label prefHeight="34.0" prefWidth="101.0" text="Etat de convention">
+                                 <font>
+                                    <Font name="System Bold" size="11.0" />
+                                 </font></Label>
+                              <ComboBox fx:id="cbstatus" prefHeight="34.0" prefWidth="115.0" promptText="Choisir l'état" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <TableView fx:id="tvConvention" layoutX="282.0" layoutY="111.0" onMouseClicked="#handleMouseClicked" prefHeight="609.0" prefWidth="638.0" style="-fx-background-color: #212121;">
+                     <columns>
+                        <TableColumn fx:id="colsociete" prefWidth="106.4000244140625" text="Société" />
+                        <TableColumn fx:id="coladresse" minWidth="6.4000244140625" prefWidth="126.39999389648438" text="Adresse" />
+                        <TableColumn fx:id="colemail" minWidth="5.60003662109375" prefWidth="104.79998779296875" text="Email" />
+                        <TableColumn fx:id="coltelephone" prefWidth="129.60003662109375" text="Téléphone" />
+                        <TableColumn fx:id="colstatus" prefWidth="167.199951171875" text="Etat de convention" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="btnclear" layoutX="147.0" layoutY="142.0" mnemonicParsing="false" onAction="#Clear" prefHeight="29.0" prefWidth="82.0" style="-fx-background-color: #424242; -fx-border-color: #FFFFFF;" text="Annuler">
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#d6c03a" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <HBox alignment="TOP_RIGHT" layoutX="27.0" layoutY="21.0" prefHeight="44.0" prefWidth="601.0" />
+                  <VBox layoutX="55.0" layoutY="415.0" prefHeight="78.0" prefWidth="160.0">
+                     <children>
+                        <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#Modifier" prefHeight="34.0" prefWidth="160.0" style="-fx-background-color: #424242; -fx-border-color: #FFFFFF;" text="Modifier Convention">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0" startX="0.5476190476190477">
+                                 <stops>
+                                    <Stop color="#c29e0ed2" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#Delete" prefHeight="35.0" prefWidth="165.0" style="-fx-background-color: #424242; -fx-border-color: #FFFFFF;" text="Supprimer Convention">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0" startX="0.5476190476190477">
+                                 <stops>
+                                    <Stop color="#c29e0ed2" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Label layoutX="27.0" layoutY="21.0" prefHeight="36.0" prefWidth="625.0" text="Conventions" textFill="#2b8e2b">
+                     <font>
+                        <Font name="Freestyle Script" size="62.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

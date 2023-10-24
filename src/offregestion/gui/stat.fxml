@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="stat" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="offregestion.gui.StatController">
+   <children>
+      <StackedBarChart fx:id="reservationChart" layoutX="249.0" layoutY="248.0" prefHeight="159.0" prefWidth="337.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxis" side="LEFT" />
+        </yAxis>
+      </StackedBarChart>
+      <StackedBarChart fx:id="offreChart" layoutX="249.0" layoutY="62.0" prefHeight="167.0" prefWidth="337.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxis" side="LEFT" />
+        </yAxis>
+      </StackedBarChart>
+      <Label layoutX="286.0" layoutY="23.0" prefHeight="32.0" prefWidth="110.0" text="offres" textFill="#9e5e0f">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="292.0" layoutY="221.0" prefHeight="32.0" prefWidth="110.0" text="reservation" textFill="#977921">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <VBox fx:id="vbox" layoutX="6.0" prefHeight="407.0" prefWidth="110.0" />
+   </children>
+</AnchorPane>
