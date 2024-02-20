@@ -24,7 +24,7 @@ import services.Serviceregime;
  */
 public class MyDB {
     
-    String url = "jdbc:mysql://localhost:3306/gestregime";
+    String url = "jdbc:mysql://localhost:3306/web";
     String user = "root";
     String pwd = "";
     

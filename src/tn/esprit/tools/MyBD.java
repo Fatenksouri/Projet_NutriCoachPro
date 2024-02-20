@@ -19,7 +19,7 @@ import javax.swing.JOptionPane;
  */
 public class MyBD {
         //
-    String url = "jdbc:mysql://localhost:3306/pidev4se1";
+    String url = "jdbc:mysql://localhost:3306/web";
     String user = "root";
     String pwd = "";
     

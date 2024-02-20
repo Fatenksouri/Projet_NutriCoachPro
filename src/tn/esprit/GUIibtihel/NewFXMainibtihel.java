@@ -25,7 +25,7 @@ public class NewFXMainibtihel extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         
-     Parent root = FXMLLoader.load(getClass().getResource("PI_1.fxml"));
+     Parent root = FXMLLoader.load(getClass().getResource("HOME.fxml"));
         
         Scene scene = new Scene(root);
        

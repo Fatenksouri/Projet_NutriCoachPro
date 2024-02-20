@@ -63,7 +63,7 @@ import javafx.scene.Node;
 import javafx.scene.control.ComboBox;
 import org.apache.commons.lang3.RandomStringUtils;
 import services.ServiceConvention;
-import utils.Mailling;
+//import utils.Mailling;
 
 
 
@@ -193,17 +193,17 @@ public class FXMLconventionBController implements Initializable {
     @FXML
     private void Modifier(ActionEvent event) {
         
-       Mailling m = new Mailling();
+      // Mailling m = new Mailling();
         if (tvConvention.getSelectionModel().getSelectedItem() != null) {
                    
             Convention c = new Convention(tvConvention.getSelectionModel().getSelectedItem().getId(),tfsociete.getText(), tfadresse.getText(), tfemail.getText(), tftelephone.getText(),selectedCategory);
 
             sc.modifier(c);
             
-            if(selectedCategory.equals("convention acceptée")){
+            /*if(selectedCategory.equals("convention acceptée")){
                 m.sendemail(tfemail.getText());
                
-            }
+            }*/
             
         ButtonType okButtonType = new ButtonType("Confirmer", ButtonBar.ButtonData.OK_DONE);
         ButtonType cancelButtonType = new ButtonType("Annuler", ButtonBar.ButtonData.CANCEL_CLOSE);

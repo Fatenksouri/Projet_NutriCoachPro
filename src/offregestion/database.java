@@ -18,7 +18,7 @@ public class database {
       Connection cnx;
      static database instance;
     
-    String url = "jdbc:mysql://localhost:3306/chadha";
+    String url = "jdbc:mysql://localhost:3306/web";
      String user = "root";
     String password = "";
      private database(){

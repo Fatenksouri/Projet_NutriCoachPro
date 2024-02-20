@@ -33,7 +33,7 @@ public class Serviceregime implements Iregime<Regime> {
     @Override
     public void ajouterregime(Regime r) {
         try {
-            String req = "INSERT INTO regime( nomreg,descriptionreg,objectifreg,dureereg,datecreationreg,imcMin,imcMax)values(?,?,?,?,?,?,?)";
+            String req = "INSERT INTO regime( nomreg,descriptionreg,objectifreg,dureereg,datecreationreg,imcMin,imcmax)values(?,?,?,?,?,?,?)";
             PreparedStatement pre = con.prepareStatement(req);
             
            
@@ -79,7 +79,7 @@ public class Serviceregime implements Iregime<Regime> {
                 rs.getString("dureereg"),
                 utilDate,
                 rs.getDouble("imcMin"),
-                rs.getDouble("imcMax")
+                rs.getDouble("imcmax")
             );
         }
     } catch (SQLException ex) {
@@ -109,7 +109,7 @@ public class Serviceregime implements Iregime<Regime> {
     @Override
     public void modifierregime(Regime r) {
       try {
-        String req = "UPDATE regime SET  nomreg=?, descriptionreg=?, objectifreg=?, dureereg=?, datecreationreg=?,imcMin=? ,imcMax=? WHERE idreg=?";
+        String req = "UPDATE regime SET  nomreg=?, descriptionreg=?, objectifreg=?, dureereg=?, datecreationreg=?,imcMin=? ,imcmax=? WHERE idreg=?";
         PreparedStatement pre = con.prepareStatement(req);
 
         
@@ -155,7 +155,7 @@ public class Serviceregime implements Iregime<Regime> {
                         rs.getString("dureereg") ,
                         utilDate,
                         rs.getDouble("imcMin"),
-                        rs.getDouble("imcMax"));
+                        rs.getDouble("imcmax"));
                 
                 regimes.add(r);
             }
@@ -189,7 +189,7 @@ public class Serviceregime implements Iregime<Regime> {
                 rs.getString("dureereg"),
                 utilDate,
                 rs.getDouble("imcMin"),
-                rs.getDouble("imcMax")); 
+                rs.getDouble("imcmax")); 
             
             
             regimes.add(regime);

@@ -28,7 +28,7 @@
                </columns>
             </TableView>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="76.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fitHeight="200.0" fitWidth="249.0" layoutX="85.0">
+            <ImageView fitHeight="134.0" fitWidth="149.0" layoutX="127.0" layoutY="202.0">
                <image>
                   <Image url="@../image/380058065_862351195131450_3245300040714076188_n%20(1).png" />
                </image>
@@ -51,8 +51,8 @@
             <Button layoutX="547.0" layoutY="642.0" mnemonicParsing="false" onAction="#modifierreg" prefHeight="31.0" prefWidth="104.0" text="Modifier" />
             <Button layoutX="1008.0" layoutY="724.0" mnemonicParsing="false" onAction="#pdffiche" prefHeight="31.0" prefWidth="104.0" text="PDF" />
             <Button layoutX="866.0" layoutY="724.0" mnemonicParsing="false" onAction="#excelfiche" prefHeight="31.0" prefWidth="111.0" text="excel" />
-            <TextField fx:id="filtretxtreg" layoutX="840.0" layoutY="72.0" />
-            <Button layoutX="1101.0" layoutY="72.0" mnemonicParsing="false" onAction="#filtrerreg" text="filtrer" />
+            <TextField fx:id="filtretxtreg" layoutX="658.0" layoutY="100.0" />
+            <Button layoutX="835.0" layoutY="100.0" mnemonicParsing="false" onAction="#filtrerreg" text="filtrer" />
          </children>
       </AnchorPane>
    </children>

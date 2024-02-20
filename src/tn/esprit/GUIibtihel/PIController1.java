@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package tn.esprit.GUIibtihel;
 import API.Notification_ac;
 import javafx.scene.image.Image;
@@ -107,15 +103,7 @@ public class PIController1 implements Initializable {
     private TableColumn<Activite,String > col_TYPE_AC;
     @FXML
     private Label lbidac;
-    private TextField tfnomac;
-    private TextField tfdureac;
-    private TextField tfrepac;
-    private ChoiceBox<Objectif> ch_ob_ac;
-    private ChoiceBox<TypeActivite> ch_ty_ac;
-    private TextField tfdescac;
-    private Label lbTitleAjoutACTIVITE;
-    private Label lbTitleModifierACTIVITE;
-    private Pane pnFormActivite;
+ 
     @FXML
     private ChoiceBox<TypeActivite> chR_typ_AC;
     @FXML
@@ -127,8 +115,6 @@ public class PIController1 implements Initializable {
     @FXML
     private Button ActivitePlanning;
 
-   
-   
 @FXML
 private ChoiceBox<Planning> chnom_pl; // Gardez ChoiceBox<Planning> comme type
     @FXML
@@ -236,26 +222,7 @@ public void initialize(URL url, ResourceBundle rb) {
 
     
 }
-/*
-    void onBtnImageAcClick(ActionEvent event) {
-    // Configure le FileChooser pour sélectionner des fichiers d'image
-    FileChooser fileChooser = new FileChooser();
-    fileChooser.getExtensionFilters().addAll(
-        new FileChooser.ExtensionFilter("Images", "*.png", "*.jpg", "*.jpeg", "*.gif")
-    );
 
-    // Ouvrez la boîte de dialogue de sélection de fichier
-    File selectedFile = fileChooser.showOpenDialog(new Stage());
-
-    // Si un fichier a été sélectionné, affichez le chemin dans le champ de texte
-    if (selectedFile != null) {
-        path_ac.setText(selectedFile.getAbsolutePath());
-        Image image = new Image(selectedFile.toURI().toString());
-    }
-  
-       
-    }
-*/
     
     
     
@@ -497,202 +464,8 @@ private void fnSelectedPlanning(MouseEvent event) {
 
 
 
-    private void fnAjoutActivite(ActionEvent event) {
-        pnFormActivite.toFront();
-        lbTitleAjoutACTIVITE.setVisible(true);
-        lbTitleModifierACTIVITE.setVisible(false);
-    }
-
-    private void fnModifyActivite(ActionEvent event) {
-         pnFormActivite.toFront();
-        lbTitleAjoutACTIVITE.setVisible(false);
-        lbTitleModifierACTIVITE.setVisible(true);
-        ServiceActivite A1 =new ServiceActivite();
-        Activite A=A1.getById(Integer.parseInt(lbidac.getText()));
-        tfnomac.setText(A.getNom_ac());
-        tfdureac.setText(String.valueOf(A.getDuree_ac()));;
-        tfrepac.setText(String.valueOf(A.getRepetition_ac()));;
-        tfdescac.setText(A.getDescription_ac());
-          // Récupérer la valeur sélectionnée dans ch_ob_ac (Objectif)
-        Objectif selectedObjectif = ch_ob_ac.getValue();
-        // Récupérer la valeur sélectionnée dans ch_ty_ac (TypeActivite)
-        TypeActivite selectedTypeActivite = ch_ty_ac.getValue();
-
-        // Maintenant, vous pouvez utiliser ces valeurs pour configurer votre objet Activite
-        A.setObj_ac(selectedObjectif);
-        A.setType_ac(selectedTypeActivite);
-     
-    }
- 
-
-    private void fnSupprimerActivite(ActionEvent event) {
-        // Récupérez le texte de la Label lbidpl
-        String idActiviteText = lbidac.getText();
-
-        // Assurez-vous que le texte n'est pas vide
-        if (!idActiviteText.isEmpty()) {
-            try {
-                // Convertissez le texte en un entier (ID du planning)
-                int AC_Id = Integer.parseInt(idActiviteText);
-
-                ServiceActivite A = new ServiceActivite();
-                A.supprimer(AC_Id);
-                fnActiviteShow(); // Met à jour la liste des plannings après suppression
-            } catch (NumberFormatException e) {
-                // Gérez l'exception si la conversion échoue (par exemple, affichez un message d'erreur)
-                System.err.println("Erreur de conversion de l'ID du ACTIVITE : " + e.getMessage());
-            }
-        } else {
-            // Gérez le cas où la Label est vide (par exemple, affichez un message d'erreur)
-            System.err.println("L'ID du ACTIVITE est vide.");
-        }
-        }
-    
-    
-    private void fnConfAC(ActionEvent event) {
-    ServiceActivite activiteService = new ServiceActivite();
-    System.out.println(lbTitleAjoutACTIVITE.isVisible());
-    System.out.println(lbidac.getText());
-    
-    if (lbTitleAjoutACTIVITE.isVisible()) {
-          
-        Activite A = new Activite();
-
-        String ERROR_MSG = "";
-        
-        if ("".equals(tfnomac.getText())) {
-            ERROR_MSG = "Le champ nom ne doit pas être vide.";
-        }
-        
-        if (tfdureac.getText().isEmpty()) {
-            ERROR_MSG = "Le champ durée ne doit pas être vide.";
-        }
-        
-        if ("".equals(tfrepac.getText())) {
-            ERROR_MSG = "Le champ répétition ne doit pas être vide.";
-        }
-        
-        if ("".equals(tfdescac.getText())) {
-            ERROR_MSG = "Le champ description ne doit pas être vide.";
-        }
-
-        if (ch_ty_ac.getValue() == null) {
-            ERROR_MSG = "Veuillez sélectionner un type d'activité.";
-        }
-
-        if (ch_ob_ac.getValue() == null) {
-            ERROR_MSG = "Veuillez sélectionner un objectif.";
-        }
-          // String imagePath = path_ac.getText();
-        //if (imagePath.isEmpty()) {
-            //ERROR_MSG = "Veuillez sélectionner une image.";
-        //}
-        
-        if (!"".equals(ERROR_MSG)) {
-            Stage window = (Stage) pnFormActivite.getScene().getWindow();
-            Alert.AlertType type = Alert.AlertType.ERROR;
-            Alert alert = new Alert(type, "");
-
-            alert.initModality(Modality.APPLICATION_MODAL);
-            alert.initOwner(window);
-
-            alert.getDialogPane().setContentText(ERROR_MSG);
-            alert.getDialogPane().setHeaderText("");
-
-            Optional<ButtonType> result = alert.showAndWait();
-            if (result.get() == ButtonType.OK) {
-                pnActivite.toFront();
-            }
-        } else {
-            A.setNom_ac(tfnomac.getText());
-            A.setDuree_ac(Float.parseFloat(tfdureac.getText()));
-            A.setRepetition_ac(Integer.parseInt(tfrepac.getText()));
-            A.setDescription_ac(tfdescac.getText());
-            A.setType_ac(ch_ty_ac.getValue()); // Utilisation de la valeur sélectionnée dans ch_ty_ac
-            A.setObj_ac(ch_ob_ac.getValue()); // Utilisation de la valeur sélectionnée dans ch_ob_ac
-            //A.setImagePath(imagePath);
-            activiteService.ajouter(A);
-
-            tfnomac.setText("");
-            tfdureac.setText("");
-            tfrepac.setText("");
-            tfdescac.setText("");
-            //path_ac.setText("");
-
-            pnActivite.toFront();
-
-            // Appeler la méthode pour afficher les activités si nécessaire
-        }
-    } else {
-        // Logique pour modifier une activité existante
-        Activite A = activiteService.getById(Integer.parseInt(lbidac.getText())); // Récupérer l'activité existante
-
-        String ERROR_MSG = "";
-
-        if ("".equals(tfnomac.getText())) {
-            ERROR_MSG = "Le champ nom ne doit pas être vide.";
-        }
-
-        if ("".equals(tfdureac.getText())) {
-            ERROR_MSG = "Le champ durée ne doit pas être vide.";
-        }
-
-        if ("".equals(tfrepac.getText())) {
-            ERROR_MSG = "Le champ répétition ne doit pas être vide.";
-        }
-
-        if ("".equals(tfdescac.getText())) {
-            ERROR_MSG = "Le champ description ne doit pas être vide.";
-        }
-
-        if (ch_ty_ac.getValue() == null) {
-            ERROR_MSG = "Veuillez sélectionner un type d'activité.";
-        }
-
-        if (ch_ob_ac.getValue() == null) {
-            ERROR_MSG = "Veuillez sélectionner un objectif.";
-        }
-
-        if (!"".equals(ERROR_MSG)) {
-            Stage window = (Stage) pnFormActivite.getScene().getWindow();
-            Alert.AlertType type = Alert.AlertType.ERROR;
-            Alert alert = new Alert(type, "");
-
-            alert.initModality(Modality.APPLICATION_MODAL);
-            alert.initOwner(window);
-
-            alert.getDialogPane().setContentText(ERROR_MSG);
-            alert.getDialogPane().setHeaderText("");
-
-            Optional<ButtonType> result = alert.showAndWait();
-            if (result.get() == ButtonType.OK) {
-                pnFormActivite.toFront();
-            }
-        } else {
-            A.setNom_ac(tfnomac.getText());
-            A.setDuree_ac(Float.parseFloat(tfdureac.getText()));
-            A.setRepetition_ac(Integer.parseInt(tfrepac.getText()));
-            A.setDescription_ac(tfdescac.getText());
-            A.setType_ac(ch_ty_ac.getValue());
-            A.setObj_ac(ch_ob_ac.getValue());
-            A.setId_ac(Integer.parseInt(lbidac.getText()));
-
-            activiteService.modifier(A); // Mettre à jour l'activité existante
-            Notification_ac n=new Notification_ac();
-            n.notification_ac();
-            tfnomac.setText("");
-            tfdureac.setText("");
-            tfrepac.setText("");
-            tfdescac.setText("");
-            
-            pnActivite.toFront();
-            fnActiviteShow();
-
-            // Appeler la méthode pour afficher les activités si nécessaire
-        }
-    }
-}
-
+   
+  
     @FXML
     public void rechercherActivites() {
     ServiceActivite activiteService = new ServiceActivite();
@@ -717,6 +490,19 @@ private void fnSelectedPlanning(MouseEvent event) {
     // Mettez à jour votre interface utilisateur avec les activités trouvées
     afficherActivites(activites);
 }
+@FXML
+private void resetAffichage(ActionEvent event) {
+    // Effacez tout texte ou valeurs des champs de texte ou des ChoiceBox
+  
+    // Appelez la méthode pour afficher les activités par défaut (ou affichez toutes les activités)
+    fnActiviteShow();
+}
+
+
+
+    
+    
+
 
   public void afficherActivites(List<Activite> activites) {
     ObservableList<Activite> list = FXCollections.observableArrayList(activites);
@@ -733,20 +519,7 @@ private void fnSelectedPlanning(MouseEvent event) {
 }
 
 
-@FXML
-private void resetAffichage(ActionEvent event) {
-    // Effacez tout texte ou valeurs des champs de texte ou des ChoiceBox
-    tfnomac.clear();
-    tfdureac.clear();
-    tfrepac.clear();
-    tfdescac.clear();
-  //  ch_ty_ac.setValue(null); // Réinitialisez la valeur de ChoiceBox
-   // ch_ob_ac.setValue(null); // Réinitialisez la valeur de ChoiceBox
-    // Réinitialisez d'autres composants de votre interface utilisateur au besoin
 
-    // Appelez la méthode pour afficher les activités par défaut (ou affichez toutes les activités)
-    fnActiviteShow();
-}
 
 
 
@@ -846,25 +619,28 @@ private void afficherMessageErreur(String message) {
     
     }
     }
-
-@FXML
-private void enregistrer_ratting_ac(ActionEvent event) {
-    Activite selectedActivite = tvActivite.getSelectionModel().getSelectedItem();
-    if (selectedActivite != null) {
+  @FXML
+    private void enregistrer_ratting_ac(ActionEvent event) {
+         Activite selectedActivite = tvActivite.getSelectionModel().getSelectedItem();
+         if (selectedActivite != null) {
         double newRating = ratingA_ac.getRating();
         selectedActivite.setRating_ac((int) newRating);
         ServiceActivite A1 = new ServiceActivite();
         A1.updateRating(selectedActivite); // Mettre à jour la note dans la base de données
-
-        if (newRating > 3) {
-            // Si la note est supérieure à 3, envoie un SMS (votre code actuel)
-
-            // Affichez une alerte pour indiquer que la notation a été enregistrée
-            showAlert("Notation enregistrée", "La notation a été enregistrée avec succès.");
+        
+        
+      if (newRating>3){
+      
+             SMS twilioService = new SMS();
+            
+             twilioService.sendSMS();
+             showAlert("Notation enregistrée", "La notation a été enregistrée avec succès.");
             pnPlanning.toFront();
-        }
+             
+      }
+      
     }
-}
+    }
 
 
 
@@ -873,47 +649,7 @@ private void enregistrer_ratting_ac(ActionEvent event) {
     private void retour2_ac(ActionEvent event) {
         pnActivite.toFront();
     }
-/*
- @FXML
-private void personnaliser_ac(ActionEvent event) {
-    ServicePlanning SP = new ServicePlanning();
-    String ERROR_MSG = "";
 
-    if (ch_pers_type_ac.getValue() == null) {
-        ERROR_MSG = "Veuillez sélectionner un type d'activité.";
-    }
-
-    if ("".equals(tf_pers_duree_ac.getText())) {
-        ERROR_MSG = "Le champ durée ne doit pas être vide.";
-    }
-
-    if ("".equals(tf_pers_nom_ac.getText())) {
-        ERROR_MSG = "Le champ nom ne doit pas être vide.";
-    }
-
-    if (!"".equals(ERROR_MSG)) {
-        // Afficher une boîte de dialogue d'erreur
-        Alert.AlertType type = Alert.AlertType.ERROR;
-        Alert alert = new Alert(type, "");
-        alert.initModality(Modality.APPLICATION_MODAL);
-        alert.initOwner(tf_pers_duree_ac.getScene().getWindow());
-        alert.getDialogPane().setContentText(ERROR_MSG);
-        alert.showAndWait();
-    } else {
-        // Créer un planning automatique avec des activités du même type
-        String nomPlanning = tf_pers_nom_ac.getText();
-        float dureePlanning = Float.parseFloat(tf_pers_duree_ac.getText());
-        TypeActivite typeActivite = ch_pers_type_ac.getValue();
-
-        Planning planning = SP.creerPlanningAutomatique(nomPlanning, dureePlanning, typeActivite);
-
-        // Réinitialiser les champs après la création du planning
-        tf_pers_nom_ac.setText("");
-        tf_pers_duree_ac.setText("");
-
-        // Vous pouvez faire ce que vous voulez avec le planning ici, par exemple, l'afficher ou le traiter d'une autre manière.
-    }
-}*/
  private int likeCount = 0;
 private int dislikeCount = 0;
 
@@ -1010,6 +746,12 @@ private void showAlert(String title, String message) {
 
    
     
+
+
+
+
+
+ 
 
 
 

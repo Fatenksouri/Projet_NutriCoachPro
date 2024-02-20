@@ -18,7 +18,7 @@ public class DataSourceConvention {
     
     private String user = "root";
     private String password = "";
-    private String url = "jdbc:mysql://localhost:3306/convention2";
+    private String url = "jdbc:mysql://localhost:3306/web";
 
     private static DataSourceConvention instance;
     

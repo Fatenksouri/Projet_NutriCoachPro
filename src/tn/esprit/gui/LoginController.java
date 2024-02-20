@@ -86,9 +86,9 @@ public class LoginController implements Initializable {
             System.out.println(password.getText());
             if (serviceuser.authenticateUser(username.getText(), password.getText())){
                 if(user.getRole().equals(Role.ADMIN)){//if (user.getrole=Admin
-                    SceneBuilderUtil.changeScene(event, "ListUser.fxml", "Ajout compte", null, 600, 500);
+                    SceneBuilderUtil.changeScene(event, "/tn/esprit/GUIibtihel/HOME_1.fxml", "HOME CLIENT", null, 600, 500);
                 } else{ 
-                    SceneBuilderUtil.changeScene(event, "DetailUser.fxml", "Ajout compte", user, 600, 500);
+                    SceneBuilderUtil.changeScene(event, "/tn/esprit/GUIibtihel/HOME.fxml", "HOME ADMIN", user, 600, 500);
                 }
             }
             else {

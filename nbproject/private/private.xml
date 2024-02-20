@@ -3,8 +3,30 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Utilisateur/Documents/Projet_NutriCoachPro/src/tn/esprit/gui/AjouterUserController.java</file>
-            <file>file:/C:/Users/Utilisateur/Documents/Projet_NutriCoachPro/src/tn/esprit/gui/LoginController.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/gui/FXMLconventionBController.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/API/MAIL.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/entity/Produit.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/main.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/utils/DataSourceConvention.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/utils/Mailling.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/gui/FXMLoffreBController.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/tools/MyDB.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/utils/DataSource.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/gui/FXMLoffreFController.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/gui/FXMLcategoryController.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/offregestion/gui/MesOffresController.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/gui/GestionregimesController.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/gui/FXMLproduitFController.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/gui/FXMLgridController.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/offregestion/gui/NewFXMain.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/gui/FXMLgridProduitController.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/gui/MenuFrontController.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/gui/Main.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/tools/Twilosmsreg.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/gui/MainConvention.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/mainCon.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/gui/FXMLconventionFController.java</file>
+            <file>file:/C:/Users/omnia/OneDrive/Bureau/Projet_NutriCoachPro/src/email.java</file>
         </group>
     </open-files>
 </project-private>

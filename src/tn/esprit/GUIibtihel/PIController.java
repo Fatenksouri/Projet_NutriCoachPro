@@ -145,8 +145,7 @@ private ChoiceBox<Planning> chnom_pl; // Gardez ChoiceBox<Planning> comme type
    
     @FXML
     private TextField path_ac;
-    @FXML
-    private ImageView iv_act_ac;
+  
  
     @FXML
     private TableColumn<Activite, String> COLNOMAC;
@@ -174,7 +173,7 @@ private ChoiceBox<Planning> chnom_pl; // Gardez ChoiceBox<Planning> comme type
     private Button envoi_mail_ac;
     @FXML
     private Button evaluerA_ac;
-    private HBox h_rating_ac;
+    
     @FXML
     private Rating ratingA_ac;
     @FXML
@@ -184,10 +183,7 @@ private ChoiceBox<Planning> chnom_pl; // Gardez ChoiceBox<Planning> comme type
     @FXML
     private Button retour2_ac;
   
-    private Button like_ac;
-    private Button dislike_ac;
-    private Label lb_like_ac;
-    private Label lb_dislike_ac;
+   
     @FXML
     private Button btnMenuHome_ac;
     @FXML
@@ -256,7 +252,8 @@ public void initialize(URL url, ResourceBundle rb) {
 
     
 }
-/*
+
+    @FXML
     void onBtnImageAcClick(ActionEvent event) {
     // Configure le FileChooser pour sélectionner des fichiers d'image
     FileChooser fileChooser = new FileChooser();
@@ -275,7 +272,7 @@ public void initialize(URL url, ResourceBundle rb) {
   
        
     }
-*/
+
     
     
     
@@ -500,18 +497,13 @@ private void fnSelectedPlanning(MouseEvent event) {
             File file = new File(A.getImagePath());
             Image image = new Image(file.toURI().toString());
             
-            // Afficher l'image dans l'ImageView
-            iv_act_ac.setImage(image);
+          
         } else {
-            // Effacer l'ImageView si aucune image n'est associée
-            iv_act_ac.setImage(null);
-        }
-
+                   }
         // Afficher l'ID de l'activité sélectionnée
         lbidac.setText(Integer.toString(selectedActivity.getId_ac()));
     } else {
-        // Effacer l'ImageView si aucune activité n'est sélectionnée
-        iv_act_ac.setImage(null);
+       
         // Effacer l'ID de l'activité sélectionnée
         lbidac.setText("");
     }
@@ -896,82 +888,8 @@ private void afficherMessageErreur(String message) {
     @FXML
     private void retour2_ac(ActionEvent event) {
         pnActivite.toFront();
-    }
-/*
- @FXML
-private void personnaliser_ac(ActionEvent event) {
-    ServicePlanning SP = new ServicePlanning();
-    String ERROR_MSG = "";
+     }
 
-    if (ch_pers_type_ac.getValue() == null) {
-        ERROR_MSG = "Veuillez sélectionner un type d'activité.";
-    }
-
-    if ("".equals(tf_pers_duree_ac.getText())) {
-        ERROR_MSG = "Le champ durée ne doit pas être vide.";
-    }
-
-    if ("".equals(tf_pers_nom_ac.getText())) {
-        ERROR_MSG = "Le champ nom ne doit pas être vide.";
-    }
-
-    if (!"".equals(ERROR_MSG)) {
-        // Afficher une boîte de dialogue d'erreur
-        Alert.AlertType type = Alert.AlertType.ERROR;
-        Alert alert = new Alert(type, "");
-        alert.initModality(Modality.APPLICATION_MODAL);
-        alert.initOwner(tf_pers_duree_ac.getScene().getWindow());
-        alert.getDialogPane().setContentText(ERROR_MSG);
-        alert.showAndWait();
-    } else {
-        // Créer un planning automatique avec des activités du même type
-        String nomPlanning = tf_pers_nom_ac.getText();
-        float dureePlanning = Float.parseFloat(tf_pers_duree_ac.getText());
-        TypeActivite typeActivite = ch_pers_type_ac.getValue();
-
-        Planning planning = SP.creerPlanningAutomatique(nomPlanning, dureePlanning, typeActivite);
-
-        // Réinitialiser les champs après la création du planning
-        tf_pers_nom_ac.setText("");
-        tf_pers_duree_ac.setText("");
-
-        // Vous pouvez faire ce que vous voulez avec le planning ici, par exemple, l'afficher ou le traiter d'une autre manière.
-    }
-}*/
- private int likeCount = 0;
-private int dislikeCount = 0;
-
-    private void increment_like_ac(ActionEvent event) {
-    likeCount++;
-    lb_like_ac.setText(""+likeCount);
-    
-    // Désactive le bouton "Like" pour empêcher un deuxième clic.
-    like_ac.setDisable(true);
-    dislike_ac.setDisable(false);
-
-    Planning selectedPlanning = tvPlanning.getSelectionModel().getSelectedItem();
-    if (selectedPlanning != null) {
-        selectedPlanning.setNb_like(likeCount);
-        ServicePlanning p = new ServicePlanning();
-        p.updateLike(selectedPlanning);
-    }
-}
-
-    private void decremente_like_ac(ActionEvent event) {
-    dislikeCount++;
-    lb_dislike_ac.setText(""+ dislikeCount);
-    
-    // Désactive le bouton "Dislike" pour empêcher un deuxième clic.
-    dislike_ac.setDisable(true);
-    like_ac.setDisable(false);
-
-    Planning selectedPlanning = tvPlanning.getSelectionModel().getSelectedItem();
-    if (selectedPlanning != null) {
-        selectedPlanning.setNb_dislike(dislikeCount);
-        ServicePlanning p = new ServicePlanning();
-        p.updatedisLike(selectedPlanning);
-    }
-}
 
     @FXML
     private void fnMenuHome_acc(ActionEvent event) {
@@ -995,9 +913,7 @@ private int dislikeCount = 0;
         }
     }
 
-    @FXML
-    private void onBtnImageAcClick(ActionEvent event) {
-    }
+  
 
    
     

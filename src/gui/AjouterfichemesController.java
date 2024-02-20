@@ -157,9 +157,9 @@ private void ajouterfich(ActionEvent event) {
                 successAlert.setContentText("La fiche a été ajoutée avec succès.");
                 successAlert.showAndWait();
               
-      String phoneNumber = "+21694912442"; 
-     String message = "Fiche mesures ajoutée avec succées  : " + nom; 
-     Twilosmsreg.sendSMS(phoneNumber, message);
+                // String phoneNumber = "+21694912442"; 
+    // String message = "Fiche mesures ajoutée avec succées  : " + nom; 
+   //  Twilosmsreg.sendSMS(phoneNumber, message);
             
         }
     }

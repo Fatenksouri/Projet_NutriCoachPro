@@ -23,14 +23,14 @@ public class NewFXMain extends Application {
         Parent root;
         try {
             root = FXMLLoader.load(getClass().
-                //   getResource("Ajouterfichemes.fxml"));
+                //  getResource("Ajouterfichemes.fxml"));
                     
                  
           getResource("gestionregimes.fxml"));
             Scene scene = new Scene(root);
-         // primaryStage.setTitle("Ajouter une fiche de mesures ");
+        //  primaryStage.setTitle("Ajouter une fiche de mesures ");
         
-     primaryStage.setTitle("Gestion des régimes  ");
+    // primaryStage.setTitle("Gestion des régimes  ");
        
             primaryStage.setScene(scene);
             primaryStage.show();

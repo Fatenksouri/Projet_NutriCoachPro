@@ -16,7 +16,7 @@ public class Produit {
     private String details;
     private float prix;
     private int quantite;
-     private String ref;
+     private String reference_produit;
     private String image ;    
     private int category_id;
     private String category_type;
@@ -31,20 +31,20 @@ public class Produit {
         this.quantite = quantite;
         this.image = image;
         this.category_id = category_id;
-        this.ref = ref;
+        this.reference_produit = reference_produit;
     }
 
     public Produit() {
     }
 
-    public Produit(String nom, String details, float prix, int quantite, String image, int category_id,String ref) {
+    public Produit(String nom, String details, float prix, int quantite, String image, int category_id,String reference_produit) {
         this.nom = nom;
         this.details = details;
         this.prix = prix;
         this.quantite = quantite;
         this.image = image;
         this.category_id = category_id;
-        this.ref = ref;
+        this.reference_produit = reference_produit;
     }
 
     public Produit(String  nom, String details, float prix, String image) {
@@ -123,11 +123,11 @@ public class Produit {
     }
 
     public String getRef() {
-        return ref;
+        return reference_produit;
     }
 
-    public void setRef(String ref) {
-        this.ref = ref;
+    public void setRef(String reference_produit) {
+        this.reference_produit = reference_produit;
     }
 
     public Produit(int id) {

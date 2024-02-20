@@ -23,7 +23,7 @@ import javafx.stage.Stage;
  *
  * @author Asus
  */
-public class HOMEController implements Initializable {
+public class HOMEController1 implements Initializable {
 
     @FXML
     private Label lb_G_AC;
@@ -51,7 +51,7 @@ public class HOMEController implements Initializable {
     @FXML
     private void direction_activite(MouseEvent event) {
              try {
-                 FXMLLoader loader = new FXMLLoader(getClass().getResource("PI.fxml"));
+                 FXMLLoader loader = new FXMLLoader(getClass().getResource("PI_1.fxml"));
                  Parent root = loader.load();
 
             // Create a new stage
@@ -92,7 +92,7 @@ public class HOMEController implements Initializable {
     @FXML
     private void diection_offre(MouseEvent event) {
               try {
-                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/offregestion/gui/offre.fxml"));
+                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/offregestion/gui/menu.fxml"));
                  Parent root = loader.load();
 
             // Create a new stage
@@ -112,7 +112,7 @@ public class HOMEController implements Initializable {
     @FXML
     private void direction_Regime(MouseEvent event) {
               try {
-                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/Ajouterfichemes.fxml"));
+                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/gestionregimes.fxml"));
                  Parent root = loader.load();
 
             // Create a new stage
@@ -132,7 +132,7 @@ public class HOMEController implements Initializable {
     @FXML
     private void direction_canvension(MouseEvent event) {
               try {
-                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/FXMLconventionB.fxml"));
+                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/FXMLoffreF.fxml"));
                  Parent root = loader.load();
 
             // Create a new stage
@@ -152,7 +152,7 @@ public class HOMEController implements Initializable {
     @FXML
     private void direction_str(MouseEvent event) {
               try {
-                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/FXMLcategory.fxml"));
+                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/FXMLproduitF.fxml"));
                  Parent root = loader.load();
 
             // Create a new stage
